@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Order confirmed — QA Shop</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app-header"></div>
+
+<main class="page">
+  <div class="container">
+    <div class="steps">
+      <div class="step done">1. Cart</div>
+      <div class="step done">2. Shipping &amp; payment</div>
+      <div class="step active">3. Confirmation</div>
+    </div>
+    <div id="confirmation-content" data-testid="confirmation-content">
+      <div class="spinner-text">Loading order…</div>
+    </div>
+  </div>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/pages/order-confirmation.js"></script>
+</body>
+</html>

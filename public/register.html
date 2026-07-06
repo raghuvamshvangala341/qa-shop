@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Create account — QA Shop</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app-header"></div>
+
+<main class="page">
+  <div class="container">
+    <div class="card form-shell">
+      <span class="eyebrow">Account</span>
+      <h1>Create your account</h1>
+      <p class="subtitle">Registration has validation rules on every field — a good target for negative-path tests.</p>
+
+      <div id="register-banner"></div>
+
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" data-testid="register-username-input" autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" data-testid="register-email-input" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" data-testid="register-password-input" autocomplete="new-password" />
+        </div>
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" data-testid="register-confirm-password-input" autocomplete="new-password" />
+        </div>
+        <div class="field checkbox-field">
+          <input type="checkbox" id="acceptTerms" name="acceptTerms" data-testid="register-terms-checkbox" />
+          <label for="acceptTerms" style="margin:0">I accept the terms of this practice site</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="register-submit" data-testid="register-submit-btn">Create account</button>
+      </form>
+
+      <p class="subtitle" style="margin-top:18px">Already have an account? <a href="login.html" data-testid="go-to-login-link">Log in</a></p>
+    </div>
+  </div>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/pages/register.js"></script>
+</body>
+</html>

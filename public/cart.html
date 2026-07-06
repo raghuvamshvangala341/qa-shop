@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your cart — QA Shop</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app-header"></div>
+
+<main class="page">
+  <div class="container">
+    <span class="eyebrow">Cart</span>
+    <h1>Your cart</h1>
+
+    <div class="grid-2" style="align-items:flex-start; margin-top:20px">
+      <div class="card" id="cart-items-wrap" data-testid="cart-items-wrap">
+        <div class="spinner-text">Loading cart…</div>
+      </div>
+
+      <div class="card" style="padding:20px" id="cart-summary-wrap" data-testid="cart-summary-wrap">
+        <h3>Order summary</h3>
+        <div class="field" style="display:flex; gap:8px; align-items:flex-start">
+          <input type="text" id="coupon-input" placeholder="Coupon code" data-testid="coupon-input" style="flex:1" />
+          <button class="btn btn-secondary" id="coupon-apply-btn" data-testid="coupon-apply-btn">Apply</button>
+        </div>
+        <div id="coupon-message"></div>
+        <div id="summary-rows"></div>
+        <button class="btn btn-primary btn-block" id="checkout-btn" data-testid="checkout-btn" style="margin-top:16px">Proceed to checkout</button>
+        <button class="link-btn" id="clear-cart-btn" data-testid="clear-cart-btn" style="margin-top:12px">Clear cart</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/pages/cart.js"></script>
+</body>
+</html>
